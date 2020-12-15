@@ -34,10 +34,33 @@
             android:layout_marginStart="16dp"
             android:hint="Alter ego" />
         <View
+            android:id="@+id/bar"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@+id/heroimage"
             android:layout_marginTop="16dp"
             android:background="@color/black" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bar"
+            android:paddingTop="10dp"
+            android:textStyle="bold|italic"
+            android:text="Bio"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/biografia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/alteregoedit"
+            android:layout_alignBottom="@id/alteregoedit"
+            android:layout_below="@id/alteregoedit"
+            android:layout_marginStart="16dp"
+            android:hint="Biografia"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
     </RelativeLayout>
 </layout>
