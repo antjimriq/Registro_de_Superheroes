@@ -16,7 +16,7 @@
             android:id="@+id/heroimage"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            tools:src="@tools:sample/avatars"/>
+            android:src="@android:drawable/ic_menu_camera">
         <EditText
             android:id="@+id/heronameedit"
             android:layout_width="match_parent"
@@ -50,6 +50,13 @@
             android:textAlignment="center"
             android:textSize="20dp" />
         <EditText
+            android:id="@+id/bio_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/biografia"
+            android:layout_marginTop="45dp"
+            android:hint="Short bio"/>
+        <EditText
             android:id="@+id/biografia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,10 +64,31 @@
             android:layout_alignBottom="@id/alteregoedit"
             android:layout_below="@id/alteregoedit"
             android:layout_marginStart="16dp"
-            android:hint="Biografia"/>
+            android:hint="Biografia" />
+        <TextView
+            android:id="@+id/Power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bio_text"
+            android:paddingTop="10dp"
+            android:textStyle="bold|italic"
+            android:text="Power"
+            android:textSize="20dp"
+            android:textAlignment="center" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Power"
+                android:progressBackgroundTint="@color/black"
+                android:progressTint="@color/red"
+                android:secondaryProgressTint="@color/red"
+                android:layout_centerHorizontal="true"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Save"/>
+
 
     </RelativeLayout>
 </layout>
