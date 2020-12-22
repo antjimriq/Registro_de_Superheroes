@@ -12,11 +12,19 @@ class MainActivity : AppCompatActivity() {
         val binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.saveButton.setOnClickListener{
-            openDetailActivity()
+            val superheroName=binding.heronameedit.text.toString()
+            val alterEgo=binding.alteregoedit.text.toString()
+            val bio=binding.bioText.text.toString()
+            val power=binding.ratingbar.rating
+            openDetailActivity(superheroName,alterEgo,bio,power)
         }
     }
-    private fun openDetailActivity(){
+    private fun openDetailActivity(superheroName:String, alterEgo:String, bio:String, power: Float){
         val intent = Intent(this,DetailActivity::class.java)
+        intent.putExtra("superhero_name",superheroName)
+        intent.putExtra("alter_ego",alterEgo)
+        intent.putExtra("bio",bio)
+        intent.putExtra("power",power)
         startActivity(intent)
     }
 }
