@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
     }
     private fun openDetailActivity(superheroName:String, alterEgo:String, bio:String, power: Float){
         val intent = Intent(this,DetailActivity::class.java)
-        intent.putExtra("superhero_name",superheroName)
-        intent.putExtra("alter_ego",alterEgo)
-        intent.putExtra("bio",bio)
-        intent.putExtra("power",power)
+        intent.putExtra(DetailActivity.SUPERHERO_NAME_KEY,superheroName)
+        intent.putExtra(DetailActivity.ALTER_EGO_KEY,alterEgo)
+        intent.putExtra(DetailActivity.BIO_KEY,bio)
+        intent.putExtra(DetailActivity.POWER_KEY,power)
         startActivity(intent)
     }
 }
