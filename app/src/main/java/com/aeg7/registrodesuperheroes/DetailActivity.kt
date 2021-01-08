@@ -5,10 +5,10 @@ import android.os.Bundle
 import com.aeg7.registrodesuperheroes.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
-    companion object{
+    /*companion object{
         const val SUPERHERO_NAME_KEY = "superhero_name"
         const val ALTER_EGO_KEY="alterego"
-        const val  BIO_KEY= "bio"
+        const val BIO_KEY= "bio"
         const val POWER_KEY= "power"
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,5 +24,20 @@ class DetailActivity : AppCompatActivity() {
         binding.alterego.text = alterEgo
         binding.biotext.text = bio
         binding.ratingBar.rating = power
+    }*/
+    companion object {
+        const val SUPERHERO_KEY = "superhero"
     }
+        override fun onCreate(savedInstanceState: Bundle?){
+            super.onCreate(savedInstanceState)
+            val binding = ActivityDetailBinding.inflate(layoutInflater)
+            setContentView(binding.root)
+            val bundle= intent.extras!!
+            val superhero=bundle.getParcelable<Superhero>(SUPERHERO_KEY)!!
+            /*binding.heroName.text=superhero.name
+            binding.alterego.text=superhero.alterEgo
+            binding.biotext.text=superhero.bio
+            binding.ratingBar.rating=superhero.power*/
+            binding.superhero=superhero
+        }
 }
